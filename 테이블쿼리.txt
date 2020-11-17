@@ -1,0 +1,23 @@
+CREATE TABLE `ComMember` (
+	`cm_email` VARCHAR(100) NOT NULL COLLATE 'utf8_unicode_ci',
+	`cm_pw` VARCHAR(300) NOT NULL COLLATE 'utf8_unicode_ci',
+	`cm_name` VARCHAR(50) NOT NULL COLLATE 'utf8_unicode_ci',
+	`cm_tel` VARCHAR(50) NOT NULL COLLATE 'utf8_unicode_ci',
+	`cm_add` VARCHAR(100) NOT NULL COLLATE 'utf8_unicode_ci',
+	PRIMARY KEY (`cm_email`) USING BTREE
+)
+COLLATE='utf8_unicode_ci'
+ENGINE=InnoDB
+;
+
+CREATE TABLE `OrgMember` (
+	`org_code` VARCHAR(100) NOT NULL COLLATE 'utf8_unicode_ci',
+	`org_pw` VARCHAR(300) NOT NULL COLLATE 'utf8_unicode_ci',
+	`org_name` VARCHAR(100) NOT NULL COLLATE 'utf8_unicode_ci',
+	`org_tel` VARCHAR(100) NOT NULL COLLATE 'utf8_unicode_ci',
+	`org_state` VARCHAR(1) NOT NULL DEFAULT 'N' COLLATE 'utf8_unicode_ci',
+	PRIMARY KEY (`org_code`) USING BTREE
+)
+COLLATE='utf8_unicode_ci'
+ENGINE=InnoDB
+;
